@@ -78,7 +78,6 @@ class MusicLibraryController
     input = gets.chomp.to_i
     array = Song.all.sort{|a, b| a.name <=> b.name}
     song = array[input-1]
-    binding.pry
     puts "Playing #{song.name} by #{song.artist.name}"
   end 
   
