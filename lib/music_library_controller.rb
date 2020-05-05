@@ -26,7 +26,7 @@ class MusicLibraryController
     name = gets.chomp until name == "exit"
   end 
  
-  def list_songs 
+  def list_songs(x)
     Song.all.sort{|a, b| a.name <=> b.name}.each_with_index do |song, index|
       puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
