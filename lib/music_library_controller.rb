@@ -70,7 +70,7 @@ class MusicLibraryController
     name = gets.chomp.to_i
     array = Song.all.sort{|a, b| a.name <=> b.name}
     binding.pry
-    puts "Playing #{} by #{}"
+    puts "Playing #{array.artist.name} by #{}"
   end 
   
 end 
