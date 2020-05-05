@@ -24,6 +24,7 @@ class MusicLibraryController
     puts "What would you like to do?"
     puts "To quit, type 'exit'."
     name = gets.chomp until name == "exit"
+    
   end 
  
   def list_songs
