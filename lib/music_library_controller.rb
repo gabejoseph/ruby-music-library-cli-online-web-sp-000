@@ -65,7 +65,13 @@ class MusicLibraryController
     end
   end 
   
-  
+    # describe "#list_songs" do
+    # it "prints all songs in the music library in a numbered list (alphabetized by song name)" do
+    #   expect($stdout).to receive(:puts).with("1. Thundercat - For Love I Come - dance")
+    #   expect($stdout).to receive(:puts).with("2. Real Estate - Green Aisles - country")
+    #   expect($stdout).to receive(:puts).with("3. Real Estate - It's Real - hip-hop")
+    #   expect($stdout).to receive(:puts).with("4. Action Bronson - Larry Csonka - indie")
+    #   expect($stdout).to receive(:puts).with("5. Jurassic 5 - What's Golden - hip-hop")
   
   def play_song 
     puts "Which song number would you like to play?"
@@ -73,7 +79,7 @@ class MusicLibraryController
     array = Song.all.sort{|a, b| a.name <=> b.name}
     song = array[input-1]
     binding.pry
-    puts "Playing #{song.name} by #{song.genre}"
+    puts "Playing #{song.name} by #{song.artist.name}"
   end 
   
 end 
