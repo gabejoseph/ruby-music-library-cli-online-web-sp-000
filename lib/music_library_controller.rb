@@ -76,5 +76,3 @@ class MusicLibraryController
   end 
   
 end 
-
-MusicLibraryController do list_songs
